@@ -1,37 +1,9 @@
 
-
-# Android PdfViewer
-
-__AndroidPdfViewer 1.x is available on [AndroidPdfViewerV1](https://github.com/barteksc/AndroidPdfViewerV1)
-repo, where can be developed independently. Version 1.x uses different engine for drawing document on canvas,
-so if you don't like 2.x version, try 1.x.__
-
-Library for displaying PDF documents on Android, with `animations`, `gestures`, `zoom` and `double tap` support.
-It is based on [PdfiumAndroid](https://github.com/barteksc/PdfiumAndroid) for decoding PDF files. Works on API 11 (Android 3.0) and higher.
-Licensed under Apache License 2.0.
-
-## What's new in 2.8.0?
-* Add handling of invalid pages, inspired by pull request [#433](https://github.com/barteksc/AndroidPdfViewer/pull/433). Exception on page opening crashed application until now,
-currently `OnPageErrorListener` set with `Configurator#onPageError()` is called. Invalid page color (`Color` class) can be set using `Configurator#invalidPageColor()`
-* Implement `canScrollVertically()` and `canScrollHorizontally()` methods to work e.g. with `SwipeRefreshLayout`
-* Fix bug when `Configurator#load()` method was called before view has been measured, which resulted in empty canvas
-
-2.8.1 fixes bug with rendering `PDFView` in Android Studio Layout Editor
-
-## Changes in 2.0 API
-* `Configurator#defaultPage(int)` and `PDFView#jumpTo(int)` now require page index (i.e. starting from 0)
-* `OnPageChangeListener#onPageChanged(int, int)` is called with page index (i.e. starting from 0)
-* removed scrollbar
-* added scroll handle as a replacement for scrollbar, use with `Configurator#scrollHandle()`
-* added `OnPageScrollListener` listener due to continuous scroll, register with `Configurator#onPageScroll()`
-* default scroll direction is vertical, so `Configurator#swipeVertical()` was changed to `Configurator#swipeHorizontal()`
-* removed minimap and mask configuration
-
 ## Installation
 
 Add to _build.gradle_:
 
-`compile 'com.github.barteksc:android-pdf-viewer:2.8.1'`
+implementation 'com.github.bsamidb:pdfviewer:1.0.1'
 
 Library is available in jcenter repository, probably it'll be in Maven Central soon.
 
