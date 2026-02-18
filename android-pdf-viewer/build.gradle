@@ -1,20 +1,24 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdk= 34
+    compileSdk= 36
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 34
+        minSdkVersion 23
+        targetSdkVersion 36
         versionCode 1
         versionName "2.8.1"
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     namespace 'com.github.barteksc.pdfviewer'
 }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.github.barteksc:pdfium-android:1.9.0'
-    implementation 'org.jetbrains:annotations:15.0'
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation("io.github.oothp:pdfium-android:1.9.5-beta01")
 }
