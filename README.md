@@ -3,7 +3,7 @@
 
 Add to _build.gradle_:
 
-implementation 'com.github.bsamidb:pdfviewer:1.0.1'
+implementation 'com.github.bsamidb:pdfviewer:1.0.3'
 
 Library is available in jcenter repository, probably it'll be in Maven Central soon.
 
